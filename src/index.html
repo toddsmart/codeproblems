@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <section>
+        <pre>
+            Question:
+                (function() {
+                    console.log(1);
+                    setTimeout(function(){console.log(2)}, 1000);
+                    setTimeout(function(){console.log(3)}, 0);
+                    console.log(4);
+                })();
+
+             Answer: 1, 4, 3, 2
+        </pre>
+    </section>
+    <section>
+        <pre>
+             Question:
+                for (var i = 0; i < 5; i++) {
+                    var btn = document.createElement('button');
+                    btn.appendChild(document.createTextNode('Button ' + i));
+                    btn.addEventListener('click', function()
+                    {
+                        console.log(i);
+                    });
+                    document.body.appendChild(btn);
+                }
+
+             Answer: 5
+        </pre>
+    </section>
+</body>
+</html>
